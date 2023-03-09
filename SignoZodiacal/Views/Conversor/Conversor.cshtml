@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["title"] = "Conversor";
+}
+
+@model Application.ViewModels.ConversorMoneda
+
+
+<div class="container">
+    <h2>Ingresa la moneda</h2>
+    <form class="form-control" method="post" asp-controller="Conversor" asp-action="Conversor">
+        <div class="mb-3">
+            <label class="form-label" asp-for="moneda"></label>
+            <select class="form-select" asp-for="moneda">
+                <option value="1">Dolar</option>
+                <option value="2">Peso</option>
+                <option value="3">Euro</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" asp-for="cantidad">Cantidad</label>
+            <input type="number" step="any" class="form-control" asp-for="cantidad">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" asp-for="convertido">Convertir a</label>
+            <select class="form-select" asp-for="convertido">
+                <option value="1">Dolar</option>
+                <option value="2">Peso</option>
+                <option value="3">Euro</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <div>
+        <h3>Resultado: </h3>
+        <h4>@ViewBag.resultado</h4>
+    </div>
+</div>
