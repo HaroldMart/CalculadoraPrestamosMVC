@@ -5,24 +5,22 @@
 @model Application.ViewModels.ConversorMoneda
 
 
+<div class="container text-center separador">
+    <h2 class="titulo">Calcula el valor de tu moneda</h2>
+</div>
 <div class="container">
-    <h2>Ingresa la moneda</h2>
-    <form class="form-control" method="post" asp-controller="Conversor" asp-action="Conversor">
-        <div class="mb-3">
-            <label class="form-label" asp-for="moneda"></label>
+    <form method="post" asp-controller="Conversor" asp-action="Conversor">
+         <div class="row row-cols-2">
+        <div class="col">
+            <label class="form-label" asp-for="moneda">Moneda</label>
             <select class="form-select" asp-for="moneda">
                 <option value="1">Dolar</option>
                 <option value="2">Peso</option>
                 <option value="3">Euro</option>
             </select>
         </div>
-
-        <div class="mb-3">
-            <label class="form-label" asp-for="cantidad">Cantidad</label>
-            <input type="number" step="any" class="form-control" asp-for="cantidad">
-        </div>
-
-        <div class="mb-3">
+        
+         <div class="col">
             <label class="form-label" asp-for="convertido">Convertir a</label>
             <select class="form-select" asp-for="convertido">
                 <option value="1">Dolar</option>
@@ -30,10 +28,22 @@
                 <option value="3">Euro</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+
+        <div class="col-12 mt-4 flex text-center separador">
+            <div>
+                <label class="form-label" asp-for="cantidad">Cantidad</label>
+                <input type="number" step="any" class="form-control" asp-for="cantidad">
+            </div>
+           
+        </div>
+        <div class="col-12 flex">
+             <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+       
+        </div>
     </form>
     <div>
-        <h3>Resultado: </h3>
+        <h3>Resultado:</h3>
         <h4>@ViewBag.resultado</h4>
     </div>
 </div>

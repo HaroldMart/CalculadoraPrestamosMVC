@@ -1,22 +1,19 @@
-html {
-  font-size: 14px;
+.titulo {
+    color: darkblue;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.separador {
+    margin-bottom: 30px
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.flex {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
+.brandPage {
+    color: brown;
 }
