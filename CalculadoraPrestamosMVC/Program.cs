@@ -22,6 +22,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Home}/{id?}");
+    pattern: "{controller=Conversor}/{action=Conversor}/{id?}");
 
 app.Run();
