@@ -35,11 +35,21 @@
             </select>
         </div>
         </div>
-        <button type="submit" class="btn btn-primary mt-4">Calcular</button>
+        <div class="col">
+            <button type="submit" class="btn btn-primary mt-4">Calcular</button>
+            <div class=" mt-4">
+                <h4>Tasa de interes: </h4>
+                <div>
+                    Personal: 22% ----
+                    Automovil: 12% ----
+                    Hipotecario: 8%
+                </div>
+            </div>
+        </div>
     </form>
 
     <div class="container text-center mt-4">
         <h3>El total a pagar es: @ViewBag.total</h3>
-        <h5 class="mt-2">Se debe pagar mensual: @ViewBag.cuota</h5>
+        <h5 class="mt-2">La cuota mensual que debe pagar es: @ViewBag.cuota</h5>
     </div>
 </div>
