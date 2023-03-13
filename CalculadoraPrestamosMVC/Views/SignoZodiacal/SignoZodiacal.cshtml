@@ -15,20 +15,16 @@
             <input type="number" step="any" class="form-control" asp-for="dia">
         </div>
         <div class="col">
+                @{
+                    List<string> meses = new() { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+                }
             <label class="form-label" asp-for="mes">Mes de nacimiento</label>
             <select class="form-select" asp-for="mes">
-                <option value="1">Enero</option>
-                <option value="2">Febrero</option>
-                <option value="3">Marzo</option>
-                <option value="4">Abril</option>
-                <option value="5">Mayo</option>
-                <option value="6">Junio</option>
-                <option value="7">Julio</option>
-                <option value="8">Agosto</option>
-                <option value="9">Septiembre</option>
-                <option value="10">Octubre</option>
-                <option value="11">Noviembre</option>
-                <option value="12">Diciembre</option>
+                @for(int item = 0; item < meses.Count; item++) {
+                   
+                    <option value="@item">@meses[item]</option>
+
+                    }
             </select>
         </div>
         </div>

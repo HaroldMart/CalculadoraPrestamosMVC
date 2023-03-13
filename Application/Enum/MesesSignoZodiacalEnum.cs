@@ -8,7 +8,7 @@ namespace Application.Enum
 {
     public enum MesesSignoZodiacalEnum
     {
-        ENERO = 1,
+        ENERO = 0,
         FEBRERO,
         MARZO,
         ABRIL,
